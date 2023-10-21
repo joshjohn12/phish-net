@@ -7,15 +7,18 @@
     body {
       width: 200px;
       padding: 10px;
-      background-color: rgb(227, 212, 163);
     }
   </style>
 </head>
 <body>
   <h1>Gmail Email Monitor</h1>
   <p>Monitor specific emails in Gmail.</p>
-  <button id="startMonitoring">Start Monitoring</button>
-  <button id="stopMonitoring">Stop Monitoring</button>
-  <script src="popup.js"></script>
+  <div class = 'center'>
+    <button id="scrapeEmails">Start Monitoring</button>
+    <ul id = "emailList"></ul>
+    <script src = "popup.js"></script>
+
+  </div>
+ 
 </body>
 </html>
