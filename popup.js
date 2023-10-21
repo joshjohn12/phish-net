@@ -9,6 +9,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
     emails.forEach((email) => {
         let li = document.createElement("li");
+        emails = emails.filter(email => !email.includes('png'));
         li.innerText = email;
         list.appendChild(li);
     });
