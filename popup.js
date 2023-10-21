@@ -16,7 +16,7 @@ function getCookieValue(cookieName) {
   return null;
 }
 
-// Function to update the count display in the popup
+// update count display in the extension after every click
 function updateCountDisplay(count) {
   const countDisplay = document.getElementById('count-display');
   if (countDisplay) {
@@ -24,25 +24,15 @@ function updateCountDisplay(count) {
   }
 }
 
-// Function to retrieve and increment the count
+// retrieve current count and increment it
 function incrementCount(cookieName) {
   const openCount = getCookieValue(cookieName) || 0;
   const updatedCount = parseInt(openCount, 10) + 1;
 
-  // Update the cookie with the new count
+  // Update cookie with new count
   document.cookie = `${cookieName}=${updatedCount}; path=/`;
   
-  // Update the display
   updateCountDisplay(updatedCount);
-}
-
-// Usage: Call getCookieValue with the cookie name
-const cookieName = 'extension_open_count';
-const openCount = getCookieValue(cookieName);
-if (openCount) {
-  updateCountDisplay(openCount);
-} else {
-  updateCountDisplay('Not available');
 }
 
 // Add a click event listener to the button
@@ -51,4 +41,13 @@ if (incrementButton) {
   incrementButton.addEventListener('click', () => {
     incrementCount(cookieName);
   });
+}
+
+// display count when extension is opened
+const cookieName = 'extension_open_count';
+const openCount = getCookieValue(cookieName);
+if (openCount) {
+  updateCountDisplay(openCount);
+} else {
+  updateCountDisplay('Nothing yet...');
 }
