@@ -2,5 +2,8 @@
     "name": "Phishing-net",
     "description": "Determing if email is a scam or not",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "action" : {
+        "default_popup" :  "popup.html"
+    }
 }
