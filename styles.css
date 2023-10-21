@@ -3,17 +3,51 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #cde6e1, #ccf5ed, #70dcce, #80bac6, #264b53);
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #373437;
-    color: #fff;
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: -200px;
+}
+
+.mainbox {
     text-align: center;
     padding: 20px;
+    background-color: rgba(220, 131, 15, 0.7); /* Transparent background color */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 18px;
+    width: 300px;
+}
+
+
+.header {
+    background: #373437; /* Background gradient for animation */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; 
+
+    /* background-color: #373437;
+    color: #fff;
+    text-align: center;
+    padding: 20px; */
+}
+
+@keyframes windStrands {
+    0% {
+        transform: translateY(0);
+        background-position: 0 -100%; /* Start from the top */
+    }
+    100% {
+        transform: translateY(100%);
+        background-position: 0 100%; /* End at the bottom */
+    }
 }
 
 h1 {
@@ -26,3 +60,20 @@ h1 {
     font-family: 'Raleway', sans-serif;
 }
 
+.header-text {
+    font-size: 36px;
+    color: white;
+    position: relative;
+    z-index: 1; /* Place text above the animation */
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Use the same height as the header */
+    background: linear-gradient(180deg, transparent 10%, rgba(255, 255, 255, 0.2) 30%); /* Strands effect (top to bottom) */
+    animation: windStrands 3s linear 1 normal forwards; /* Animation runs once */
+}
