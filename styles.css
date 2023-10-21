@@ -21,34 +21,8 @@ h1 {
     margin-top: 5px;
     height: 1px;
     padding-bottom: 20px;
+    text-align: center;
     font-size: 36px;
     font-family: 'Raleway', sans-serif;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #D3D3D3;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #0073e6;
-    color: #fff;
-}
