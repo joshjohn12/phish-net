@@ -1,38 +1,6 @@
 {
-    "manifest_version": 3,
-    "name": "Phish-net Extension",
-    "version": "1.0",
-    "description": "Access Gmail with this extension.",
-    "icons": {
-      "48": "icon.png",
-      "128": "icon.png"
-    },
-    "permissions": [
-      "activeTab",
-      "storage",
-      "https://mail.google.com/",
-      "identity",
-      "https://www.googleapis.com/auth/gmail.readonly",
-      "https://www.googleapis.com/auth/gmail.modify"
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
-    },
-    "background": {
-      "service_worker": "detection.js"
-    },
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
-    }
-  }
-  
+  "name": "Phishing-net",
+  "description": "Determing if email is a scam or not",
+  "version": "1.0",
+  "manifest_version": 3
+}
