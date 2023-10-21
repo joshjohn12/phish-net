@@ -75,5 +75,19 @@ h1 {
     width: 100%;
     height: 100%; /* Use the same height as the header */
     background: linear-gradient(180deg, transparent 10%, rgba(255, 255, 255, 0.2) 30%); /* Strands effect (top to bottom) */
-    animation: windStrands 3s linear 1 normal forwards; /* Animation runs once */
+    animation: windStrands 3s linear 0.06s 1 normal forwards; /* Animation runs once and keeps end effect */
+}
+
+.header-image {
+    text-align: right; /* Align content to the right within the header */
+    position: relative;
+  }
+  
+#logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute;
+    bottom: 190px; /* Adjust the distance from the top as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+    width: 85px;
 }
