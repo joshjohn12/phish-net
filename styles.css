@@ -9,23 +9,83 @@ body {
     padding: 0;
 }
 
+/* .piechart {
+    width: 500px;
+    height: 300px;
+} */
+
+.title {
+    text-align: center;
+    padding: 70px;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
 .maincontainer {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 85px;
     align-items: center;
     margin: 0;
-    margin-top: -200px;
+    width: 2000px;
 }
+
+.maincontainer2 {
+    display: flex;
+    justify-content: left;
+    padding-left: 85px;
+    align-items: center;
+    margin: 0;
+    width: 1000px;
+}
+
 
 .mainbox {
     text-align: center;
     padding: 20px;
-    background-color: rgba(220, 131, 15, 0.7); /* Transparent background color */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 18px;
-    width: 300px;
+    background-color: rgba(255, 255, 255, 1); /* Transparent background color */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 24px;
+    width: 550px;
+    height: 300px;
 }
 
+.percent {
+    text-align: center;
+    /* padding: 20px; */
+    margin-top: -150px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background color */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 24px;
+    width: 550px;
+    height: 300px;
+}
+
+#type1 {
+    padding-left: 300px;
+    padding-bottom: 40px;
+}
+
+#type2 {
+    padding-left: 300px;
+    padding-bottom: 40px;
+}
+
+#type3 {
+    padding-left: 300px;
+}
+
+#psign {
+    font-size: 56px;
+    font-weight: 700;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+#ptext {
+    margin-top: 0;
+}
 
 .header {
     background: #373437; /* Background gradient for animation */
@@ -81,14 +141,14 @@ h1 {
 
 .header-image {
     text-align: right; /* Align content to the right within the header */
-    position: relative;
-  }
-  
+    /* position: relative; */
+}
+
 #logo {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the image's aspect ratio */
     position: absolute;
-    bottom: 190px; /* Adjust the distance from the top as needed */
+    bottom: 697px; /* Adjust the distance from the top as needed */
     right: 10px; /* Adjust the distance from the right as needed */
     width: 85px;
 }
