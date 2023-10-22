@@ -9,11 +9,6 @@ body {
     padding: 0;
 }
 
-/* .piechart {
-    width: 500px;
-    height: 300px;
-} */
-
 .blank{
     padding-top: 50px;
 }
@@ -51,7 +46,7 @@ body {
     display: flex;
     justify-content: left;
     padding-left: 85px;
-    padding-top: 200px;
+    padding-top: 125px;
     align-items: center;
     margin: 0;
     width: 2000px;
@@ -88,19 +83,19 @@ body {
     height: 300px;
 }
 
-#type1 {
+/* #type1 {
     padding-left: 300px;
-    padding-bottom: 40px;
+    margin-top: 0%;
 }
 
 #type2 {
     padding-left: 300px;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
 }
 
 #type3 {
     padding-left: 300px;
-}
+} */
 
 #psign {
     font-size: 56px;
@@ -124,6 +119,41 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px; */
+}
+
+.pie-chart {
+    width: 35%;
+    height: 63%;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 150x;
+    background: conic-gradient(
+        #7f61a1 0% 33%,
+        #543f6a 33% 66%,
+        #ca9bff 66% 100%
+    );
+}
+
+.category {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+    line-height: 100px;
+}
+
+#category1 {
+    transform: rotate(0deg);
+}
+
+#category2 {
+    transform: rotate(120deg);
+}
+
+#category3 {
+    transform: rotate(240deg);
 }
 
 @keyframes windStrands {
@@ -192,7 +222,7 @@ svg#fish {
   }
   /* Fish Animation */
   svg.fish{
-    overflow:visible;
+    overflow: hidden;
   }
   
   @-webkit-keyframes swim
@@ -204,7 +234,7 @@ svg#fish {
   
   @keyframes swim
   {
-      0% {margin-left: -235px}
+      0% {margin-left: 235px}
       70% {margin-left: 100%;}
       100% {margin-left: 100%;}
   }
@@ -212,10 +242,10 @@ svg#fish {
   .fish{
       width: 235px;
       height: 104px;
-      margin-top: 500px;
+      margin-top: 450px;
       position: absolute;	
       animation: swim 20s;
-      -webkit-animation: swim 8s;
+      -webkit-animation: swim 11s;
       animation-iteration-count: infinite;
       -webkit-animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -230,7 +260,7 @@ svg#fish {
   svg #fish6 {
   fill:#528484;
     
-      -moz-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
   }
