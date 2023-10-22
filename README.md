@@ -7,4 +7,6 @@ Our application shines light on this matter by using OpenAI to combat and detect
 
 We were able to build this extension using a tech stack of  Node.js, Express, HTML, CSS, and of course the OpenAI and Gmail APIs.
 
-We believe this style of combating phishing attempts is the new way to protect individuals. 
+Link to our backend repo: https://github.com/ChristosJ11/phish-net-backend
+
+We believe our style of combating phishing attempts is a step forward into the future of security and protection for individuals. 
