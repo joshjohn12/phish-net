@@ -28,11 +28,14 @@ scrapeEmails.addEventListener("click", async () => {
     });
 });
 
-// Function to scrape emails
-function scrapeEmailsFromPage() {
-    // const emailRegEx = /[\w\.=-]+@[\w\.-]+\.[\w]{2,3}/g;
 
-    // let emails = document.body.innerHTML.match(emailRegEx);
+
+// Function to scrape emails
+async function scrapeEmailsFromPage() {
+  console.log("running")
+  const response = await fetch("http://localhost:3000/gpt");
+  // const movies = await response.json();
+  console.log(response);
 
     // // Send emails to popup
     // chrome.runtime.sendMessage({ emails });
@@ -55,7 +58,7 @@ function scrapeEmailsFromPage() {
 
         // Iterate through each <tr> element
         trElements.forEach(tr => {
-            console.log(tr.outerHTML);
+            // console.log(tr.outerHTML);
             // Your code to work with each <tr> element goes here
             // For example, you can access and modify properties of each <tr> element:
             // tr.style.backgroundColor = 'red'; // Change the background color to red
