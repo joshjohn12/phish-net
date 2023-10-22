@@ -73,14 +73,28 @@ async function fetchData() {
         // Select all <tr> elements within the <tbody>
         const trElements = tbody.querySelectorAll('tr');
         // Iterate through each <tr> element
+       
         trElements.forEach(tr => {
             const tr_id = tr.id
             // console.log(tr.outerHTML);
             try{
+              abs_path = chrome.runtime.getURL('net.png');
               domains.forEach(domain =>{
                 if(tr.outerHTML.includes(domain)){
                   console.log("true")
-                  document.getElementById(tr_id).style.backgroundColor = 'red'
+                  document.getElementById(tr_id).style.transition = 'background-color 2s ease'
+                  document.getElementById(tr_id).style.backgroundColor = '#33BFFF'
+                  const inboxTab = document.getElementById(tr_id)
+                  const image =  document.createElement('img')
+                  image.src = 'https://i.ibb.co/qD2Pnmt/logo.png';
+                  // image.setAttribute('aspect-ratio', 25/1)
+                  // image.style.width = '1000px';
+                  image.style.height = '40px';
+                  image.style.position = 'absolute';
+                  image.style.top = '0';
+                  image.style.left = '220px';
+                  inboxTab.appendChild(image);
+
                 }
   
               })
