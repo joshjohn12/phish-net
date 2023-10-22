@@ -31,17 +31,10 @@ async function getPercentages() {
   
       // Find the HTML element where you want to display the specific element
       const specificElementElement = document.getElementById('specificElement');
-  
-      if (specificElementElement) {
-        // Check if the index is within the array bounds
-        if (index >= 0 && index < percentage_object.length) {
-          specificElementElement.textContent = percentage_object[index];
-        } else {
-          specificElementElement.textContent = 'Index out of bounds';
-        }
-      } else {
-        console.error('Element with id "specificElement" not found.');
-      }
+    //   const titleElement =  document.getElementsByClassName('title')
+    //   titleElement.textContent = "Phish-Net has stopped "+ percentage_object.total + "phishing attempts."
+    specificElementElement.textContent =  "Phish-Net has stopped "+ percentage_object.total + " phishing attempts.";
+      console.log(percentage_object.total)
     } catch (error) {
       console.error('Error in displaySpecificElement:', error);
       // Handle the error if necessary
@@ -49,5 +42,5 @@ async function getPercentages() {
   }
   
   // Call the displaySpecificElement function with the desired index
-  displaySpecificElement(4); // Display the first element, adjust the index as needed
+  displaySpecificElement(0); // Display the first element, adjust the index as needed
   
