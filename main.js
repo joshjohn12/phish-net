@@ -47,10 +47,10 @@ async function getPercentages() {
       console.log(percentage_object);
   
       // Find the HTML element where you want to display the specific element
-      const specificElementElement = document.getElementById('percentage');
+      const specificElementElement = document.getElementById('psign');
     //   const titleElement =  document.getElementsByClassName('title')
     //   titleElement.textContent = "Phish-Net has stopped "+ percentage_object.total + "phishing attempts."
-        specificElementElement.textContent = percentage_object.financial + percentage_object.password + percentage_object.identity;
+        specificElementElement.textContent = percentage_object.financial + percentage_object.password + percentage_object.identity + "%";
       console.log(percentage_object.financial + percentage_object.password + percentage_object.identity);
     } catch (error) {
       console.error('Error in displaySpecificElement:', error);
