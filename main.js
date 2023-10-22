@@ -24,7 +24,7 @@ async function getPercentages() {
     }
   }
   
-  async function displaySpecificElement(index) {
+  async function displaySpecificElement() {
     try {
       const percentage_object = await getPercentages();
       console.log(percentage_object);
@@ -40,7 +40,25 @@ async function getPercentages() {
       // Handle the error if necessary
     }
   }
+
+  async function displayPercentage() {
+    try {
+      const percentage_object = await getPercentages();
+      console.log(percentage_object);
   
-  // Call the displaySpecificElement function with the desired index
-  displaySpecificElement(0); // Display the first element, adjust the index as needed
+      // Find the HTML element where you want to display the specific element
+      const specificElementElement = document.getElementById('percentage');
+    //   const titleElement =  document.getElementsByClassName('title')
+    //   titleElement.textContent = "Phish-Net has stopped "+ percentage_object.total + "phishing attempts."
+        specificElementElement.textContent = percentage_object.financial + percentage_object.password + percentage_object.identity;
+      console.log(percentage_object.financial + percentage_object.password + percentage_object.identity);
+    } catch (error) {
+      console.error('Error in displaySpecificElement:', error);
+      // Handle the error if necessary
+    }
+  }
+  
+// Call the displaySpecificElement function with the desired index
+displaySpecificElement(); // Display the first element, adjust the index as needed
+displayPercentage();
   
