@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, #cde6e1, #ccf5ed, #70dcce, #80bac6, #264b53);
+    background: linear-gradient(to bottom, #ccf5ed, #b6e3da, #70dcce, #80bac6, #264b53);
     margin: 0;
     padding: 0;
 }
@@ -91,3 +91,4 @@ h1 {
     right: 10px; /* Adjust the distance from the right as needed */
     width: 85px;
 }
+
