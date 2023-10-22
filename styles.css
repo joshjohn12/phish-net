@@ -17,7 +17,7 @@ body {
     /* padding: 70px; */
     font-size: 52px;
     font-weight: 700;
-    width: 1050px;
+    width: 1150px;
     /* margin-bottom: 300px; */
     letter-spacing: 0.025em;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -33,7 +33,7 @@ body {
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
-    to { width: 74% }
+    to { width: 80% }
 }
     
 /* The typewriter cursor effect */
@@ -121,17 +121,33 @@ body {
     padding: 20px; */
 }
 
-.pie-chart {
+.list1{
+    padding-top: 50px;
+    padding-left: 1px;
+    word-spacing: 20px;
+    font-weight: 700;
+    
+}
+
+.list1 span:nth-child(1) {color: #7f61a1;}
+.list1 span:nth-child(2) {color: #9e5ee3;}
+.list1 span:nth-child(3) {color: #ca9bff;}
+.list1 span:nth-child(4) {color: #442c60;}
+
+
+
+#pie-chart {
     width: 35%;
     height: 63%;
     border-radius: 50%;
     position: relative;
-    margin-top: 40px;
-    margin-left: 150x;
+    margin-top: 20px;
+    margin-left: 175px;
     background: conic-gradient(
-        #7f61a1 0% 33%,
-        #543f6a 33% 66%,
-        #ca9bff 66% 100%
+        #7f61a1 0% 25%,
+        #543f6a 25% 50%,
+        #ca9bff 50% 75%,
+        #442c60 75% 100%
     );
 }
 
@@ -139,7 +155,7 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     text-align: center;
     line-height: 100px;
 }
@@ -149,12 +165,18 @@ body {
 }
 
 #category2 {
-    transform: rotate(120deg);
+    transform: rotate(90deg);
 }
 
 #category3 {
-    transform: rotate(240deg);
+    transform: rotate(180deg);
 }
+
+#category4 {
+    transform: rotate(270deg);
+}
+
+
 
 @keyframes windStrands {
     0% {
@@ -204,7 +226,7 @@ h1 {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the image's aspect ratio */
     position: absolute;
-    bottom: 697px; /* Adjust the distance from the top as needed */
+    bottom: 775px; /* Adjust the distance from the top as needed */
     right: 10px; /* Adjust the distance from the right as needed */
     width: 85px;
 }
@@ -217,10 +239,13 @@ h1 {
     right: 275px; /* Adjust the distance from the right as needed */
 }
 
+  
+
+
+/* Fish Animation */
 svg#fish {
     top: 5em;
   }
-  /* Fish Animation */
   svg.fish{
     overflow: hidden;
   }

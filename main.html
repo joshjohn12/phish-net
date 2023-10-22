@@ -5,6 +5,7 @@
     <title>Phish-Net Statistics</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -12,25 +13,37 @@
     </header>
     <div class = "blank"></div>
     <div class="title">
-            Phish-Net has stopped 20 phishing attempts.
+        <div id = "specificElement"></div> 
     </div>
 
     <div class="maincontainer">
         <div class="mainbox">
             Scam Split <br>
-            <div class="pie-chart">
-                <div class="category" id="category1"></div>
+            <div id="pie-chart" >
+                <!-- <div class="category" id="category1"></div>
                 <div class="category" id="category2"></div>
                 <div class="category" id="category3"></div>
+                <div class="category" id="category4"></div> -->
             </div>
             <!-- <p id="type1"> Passwords </p>
             <p id="type2"> Financial </p>
             <p id="type3"> Identity </p> -->
-            
+            <div class = "list1">
+                <span>Financial</span>    <span>Passwords</span>   <span>Identity</span>  <span>None</span>
+            </div>
+            <!-- <div id = "list2">
+                Passwords
+            </div>
+            <div id = "list3">
+                None
+            </div>
+            <div id = "list4">
+                Identity
+            </div> -->
         </div>
         <div class="maincontainer2">
             <div class="percent">
-                <p id="psign"> 40% </p>
+                <p id="psign">  </p>
                 <p id="ptext"> of inbox is phishing emails </p>
                 
             </div>
