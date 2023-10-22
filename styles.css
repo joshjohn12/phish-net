@@ -17,7 +17,7 @@ body {
     /* padding: 70px; */
     font-size: 52px;
     font-weight: 700;
-    width: 1050px;
+    width: 1150px;
     /* margin-bottom: 300px; */
     letter-spacing: 0.025em;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -33,7 +33,7 @@ body {
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
-    to { width: 74% }
+    to { width: 80% }
 }
     
 /* The typewriter cursor effect */
@@ -204,7 +204,7 @@ h1 {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the image's aspect ratio */
     position: absolute;
-    bottom: 697px; /* Adjust the distance from the top as needed */
+    bottom: 775px; /* Adjust the distance from the top as needed */
     right: 10px; /* Adjust the distance from the right as needed */
     width: 85px;
 }
