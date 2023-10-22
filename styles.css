@@ -3,7 +3,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, #ccf5ed, #b6e3da, #70dcce, #80bac6, #264b53);
+    background: #B4d4db;
+    /*linear-gradient(to bottom, #ccf5ed, #b6e3da, #70dcce, #80bac6, #264b53);*/
     margin: 0;
     padding: 0;
 }
