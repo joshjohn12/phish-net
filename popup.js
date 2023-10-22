@@ -45,6 +45,25 @@ function scrapeEmailsFromPage() {
 
     // Send unique emails to the popup
     chrome.runtime.sendMessage({ emails });
+
+    
+    let tbody = document.querySelectorAll('tbody'); // Replace 'tableId' with the ID or selector of the <tbody>
+    tbody = tbody[5]
+    if (tbody) {
+        // Select all <tr> elements within the <tbody>
+        const trElements = tbody.querySelectorAll('tr');
+
+        // Iterate through each <tr> element
+        trElements.forEach(tr => {
+            console.log(tr.outerHTML);
+            // Your code to work with each <tr> element goes here
+            // For example, you can access and modify properties of each <tr> element:
+            // tr.style.backgroundColor = 'red'; // Change the background color to red
+            // console.log(tr.textContent); // Log the text content of the <tr> element
+        });
+    } else {
+        console.log('The <tbody> element was not found.');
+    }
 }
 
 // display count when extension is opened
@@ -100,3 +119,6 @@ function getCookieValue(cookieName) {
       incrementCount(cookieName);
     });
   }
+
+
+ 
