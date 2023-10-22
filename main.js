@@ -24,33 +24,30 @@ async function getPercentages() {
     }
   }
   
-  async function displayPercentageData() {
+  async function displaySpecificElement(index) {
     try {
       const percentage_object = await getPercentages();
       console.log(percentage_object);
   
-      // Find the HTML element where you want to display the data
-      const percentageDataElement = document.getElementById('percentageData');
+      // Find the HTML element where you want to display the specific element
+      const specificElementElement = document.getElementById('specificElement');
   
-      if (percentageDataElement) {
-        // Create and format the HTML content to display the data
-        const percentageList = document.createElement('ul');
-        for (const item of percentage_object) {
-          const listItem = document.createElement('li');
-          listItem.textContent = item; // Modify this based on your data structure
-          percentageList.appendChild(listItem);
+      if (specificElementElement) {
+        // Check if the index is within the array bounds
+        if (index >= 0 && index < percentage_object.length) {
+          specificElementElement.textContent = percentage_object[index];
+        } else {
+          specificElementElement.textContent = 'Index out of bounds';
         }
-  
-        // Add the formatted content to the HTML element
-        percentageDataElement.appendChild(percentageList);
       } else {
-        console.error('Element with id "percentageData" not found.');
+        console.error('Element with id "specificElement" not found.');
       }
     } catch (error) {
-      console.error('Error in displayPercentageData:', error);
+      console.error('Error in displaySpecificElement:', error);
       // Handle the error if necessary
     }
   }
   
-  // Call the displayPercentageData function
-  displayPercentageData();  
+  // Call the displaySpecificElement function with the desired index
+  displaySpecificElement(4); // Display the first element, adjust the index as needed
+  
