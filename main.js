@@ -35,6 +35,7 @@ async function displaySpecificElement() {
     //   titleElement.textContent = "Phish-Net has stopped "+ percentage_object.total + "phishing attempts."
     specificElementElement.textContent =  "Phish-Net has stopped "+ percentage_object.total + " phishing attempts.";
         console.log(percentage_object.total)
+        return percentage_object
     } catch (error) {
         console.error('Error in displaySpecificElement:', error);
         // Handle the error if necessary
@@ -52,38 +53,56 @@ async function displayPercentage() {
     //   titleElement.textContent = "Phish-Net has stopped "+ percentage_object.total + "phishing attempts."
         specificElementElement.textContent = percentage_object.financial + percentage_object.password + percentage_object.identity + "%";
         console.log(percentage_object.financial + percentage_object.password + percentage_object.identity);
+        return percentage_object
     } catch (error) {
         console.error('Error in displaySpecificElement:', error);
         // Handle the error if necessary
     }
 }
 
-/// Get the .pie-chart element
-const pieChart = document.querySelector('.pie-chart');
 
-// Calculate the conic gradient background dynamically
-let conicGradient = 'conic-gradient(';
-let startAngle = 0;
+// Call the displaySpecificElement function with the desired index
+ // Display the first element, adjust the index as needed
+displaySpecificElement()
+displayPercentage();
+changeChart()
+async function changeChart(){
+ const percentage_object = await displaySpecificElement();
+    /// Get the .pie-chart element
+try{
+    const pieChart = document.getElementById('pie-chart');
 
-for (let i = 0; i < percentage_object.length; i++) {
-  const endAngle = startAngle + (percentage_object[i] * 3.6); // Each percentage occupies 3.6 degrees (360 degrees divided by 100)
+    // Calculate the conic gradient background dynamically
+    let conicGradient = 'conic-gradient(';
+    let startAngle = 0;
+    console.log(percentage_object)
+    percentage_array = Object.values(percentage_object)
+    colors = ["#7f61a1", "#543f6a", "#ca9bff", "#442c60"]
+    for (let i = 0; i < percentage_array.length -1  ; i++) {
+      const endAngle = startAngle + (percentage_array[i]); // Each percentage occupies 3.6 degrees (360 degrees divided by 100)
+        console.log(endAngle)
+        console.log("percentage array: ",percentage_array[i])
+      conicGradient += `${colors[i]} ${startAngle}% ${endAngle}%`;
+    
+      if (i < percentage_array.length - 2) {
+        conicGradient += ', ';
+      }
+    
+      startAngle = endAngle;
+    }
+    
+    conicGradient += ')';
+    console.log("final conic ",conicGradient)
+    // Apply the conic gradient background to the .pie-chart element
+    pieChart.style.background = conicGradient;
 
-  conicGradient += `#color${i} ${startAngle}% ${endAngle}%`;
-
-  if (i < percentage_object.length - 1) {
-    conicGradient += ', ';
-  }
-
-  startAngle = endAngle;
+}catch(error){
+    console.log(error)
 }
 
-conicGradient += ')';
+}
 
-// Apply the conic gradient background to the .pie-chart element
-pieChart.style.background = conicGradient;
 
   
-// Call the displaySpecificElement function with the desired index
-displaySpecificElement(); // Display the first element, adjust the index as needed
-displayPercentage();
+
   

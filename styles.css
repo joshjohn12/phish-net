@@ -121,13 +121,28 @@ body {
     padding: 20px; */
 }
 
-.pie-chart {
+.list1{
+    padding-top: 50px;
+    padding-left: 1px;
+    word-spacing: 20px;
+    font-weight: 700;
+    
+}
+
+.list1 span:nth-child(1) {color: #7f61a1;}
+.list1 span:nth-child(2) {color: #9e5ee3;}
+.list1 span:nth-child(3) {color: #ca9bff;}
+.list1 span:nth-child(4) {color: #442c60;}
+
+
+
+#pie-chart {
     width: 35%;
     height: 63%;
     border-radius: 50%;
     position: relative;
-    margin-top: 40px;
-    margin-left: 150x;
+    margin-top: 20px;
+    margin-left: 175px;
     background: conic-gradient(
         #7f61a1 0% 25%,
         #543f6a 25% 50%,
